@@ -33,8 +33,6 @@ if (hamburger && mobileNav) {
     });
   });
 }
-
-
 /* ────────────────────────────────────────────────────────────
    2. ACCORDION
    ──────────────────────────────────────────────────────────── */
@@ -56,8 +54,6 @@ document.querySelectorAll('.accordion-trigger').forEach(trigger => {
     }
   });
 });
-
-
 /* ────────────────────────────────────────────────────────────
    3. SCROLL REVEAL ANIMATIONS
    ──────────────────────────────────────────────────────────── */
@@ -71,18 +67,14 @@ const revealObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-
-
 /* ────────────────────────────────────────────────────────────
    4. DARK / LIGHT MODE TOGGLE
    ──────────────────────────────────────────────────────────── */
-
 // Inject the toggle button into the nav
 function injectDarkModeButton() {
   const navCta = document.querySelector('.nav-cta');
   if (!navCta) return;
-
-  const btn = document.createElement('button');
+const btn = document.createElement('button');
   btn.id = 'darkModeToggle';
   btn.className = 'btn btn-outline btn-sm';
   btn.setAttribute('aria-label', 'Toggle dark/light mode');
@@ -104,7 +96,6 @@ function injectDarkModeButton() {
     localStorage.setItem('dpharma-theme', next);
   });
 }
-
 function applyTheme(theme) {
   document.documentElement.setAttribute('data-theme', theme);
   const btn = document.getElementById('darkModeToggle');
@@ -117,7 +108,6 @@ function applyTheme(theme) {
     btn.title = 'Switch to light mode';
   }
 }
-
 // Add light mode CSS variables
 const lightModeStyle = document.createElement('style');
 lightModeStyle.textContent = `
@@ -138,15 +128,11 @@ lightModeStyle.textContent = `
   [data-theme="light"] .site-footer { background: #1a1a2e; }
 `;
 document.head.appendChild(lightModeStyle);
-
 injectDarkModeButton();
-
-
 /* ────────────────────────────────────────────────────────────
    5. SEARCH BAR
    Search through chapters and subjects on any page
    ──────────────────────────────────────────────────────────── */
-
 // All chapters & subjects data
 const searchData = [
   // Pharmaceutics I
@@ -218,8 +204,7 @@ function injectSearchBar() {
       document.getElementById('searchInput').focus();
     });
   }
-
-  // Close search
+ // Close search
   document.getElementById('searchClose').addEventListener('click', closeSearch);
   overlay.addEventListener('click', (e) => { if (e.target === overlay) closeSearch(); });
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeSearch(); });
@@ -229,28 +214,24 @@ function injectSearchBar() {
     document.getElementById('searchInput').value = '';
     document.getElementById('searchResults').innerHTML = '';
   }
-
-  // Search logic
+// Search logic
   document.getElementById('searchInput').addEventListener('input', (e) => {
     const query = e.target.value.trim().toLowerCase();
     const resultsEl = document.getElementById('searchResults');
 
-    if (query.length < 2) {
+   if (query.length < 2) {
       resultsEl.innerHTML = '<p style="color:rgba(255,255,255,.5); text-align:center;">Type at least 2 characters...</p>';
       return;
     }
-
-    const results = searchData.filter(item =>
+const results = searchData.filter(item =>
       item.title.toLowerCase().includes(query) ||
       item.subject.toLowerCase().includes(query)
     );
-
-    if (results.length === 0) {
+  if (results.length === 0) {
       resultsEl.innerHTML = '<p style="color:rgba(255,255,255,.5); text-align:center;">No results found.</p>';
       return;
     }
-
-    resultsEl.innerHTML = results.map(r => `
+     resultsEl.innerHTML = results.map(r => `
       <a href="${r.url}" style="display:flex; align-items:center; gap:1rem; padding:1rem 1.25rem;
         background:rgba(255,255,255,.07); border-radius:10px; text-decoration:none; color:#fff;
         border:1px solid rgba(255,255,255,.1); transition:.2s;">
@@ -264,10 +245,7 @@ function injectSearchBar() {
     `).join('');
   });
 }
-
 injectSearchBar();
-
-
 /* ────────────────────────────────────────────────────────────
    6. PROGRESS TRACKER
    Mark chapters as done — saved in localStorage
