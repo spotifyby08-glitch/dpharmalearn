@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Search – D-Pharma Learn | Find Subjects, Chapters & Topics</title>
+  <meta name="description" content="Search through all D-Pharma subjects, chapters and study topics on D-Pharma Learn. Find notes on Pharmaceutics, Pharmacology, Pharmacognosy and more." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav-container">
+    <a class="nav-brand" href="index.html">
+      <div class="nav-logo"><i class="fa-solid fa-flask-vial"></i></div>
+      <div class="nav-brand-text">
+        <span class="nav-brand-name">D-Pharma Learn</span>
+        <span class="nav-brand-tag">Free Education</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="year1.html">1st Year</a></li>
+      <li><a href="year2.html">2nd Year</a></li>
+      <li><a href="syllabus.html">Syllabus</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <button class="search-toggle-btn" id="searchToggle"><i class="fa-solid fa-magnifying-glass"></i></button>
+      <button class="theme-toggle-btn" id="themeToggle"><i class="fa-solid fa-moon" id="themeIcon"></i></button>
+      <a href="year1.html" class="btn btn-primary btn-sm">Start Learning</a>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+</header>
+
+<!-- Search Overlay -->
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-box">
+    <div class="search-box-top">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" id="searchInput" placeholder="Search subjects, chapters, topics…" autocomplete="off" />
+      <button class="search-x" id="searchClose"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="search-results-wrap" id="searchResults"></div>
+    <div class="search-box-foot">
+      <span><kbd>Esc</kbd> close</span><span><kbd>Ctrl K</kbd> open</span>
+    </div>
+  </div>
+</div>
+
+<nav class="mobile-nav" id="mobileNav">
+  <a href="index.html">Home</a><a href="year1.html">1st Year</a><a href="year2.html">2nd Year</a>
+  <a href="syllabus.html">Syllabus</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+  <a href="year1.html" class="btn btn-primary">Start Learning</a>
+</nav>
+
+<main>
+
+<!-- Search Hero -->
+<section class="search-page-hero">
+  <div class="container text-center">
+    <nav class="breadcrumb" style="justify-content:center;margin-bottom:1rem;">
+      <a href="index.html" style="color:rgba(255,255,255,.6);">Home</a>
+      <span style="color:rgba(255,255,255,.3);">/</span>
+      <strong style="color:rgba(255,255,255,.9);">Search</strong>
+    </nav>
+    <h1 style="color:#fff;font-size:clamp(1.8rem,4vw,2.8rem);">Search D-Pharma Notes</h1>
+    <p style="color:rgba(255,255,255,.75);max-width:500px;margin:.75rem auto 0;">Find subjects, chapters, and topics from all 10 D-Pharma subjects instantly.</p>
+    <div class="page-search-wrap">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" id="pageSearchInput" placeholder="e.g. tablets, pharmacology, alkaloids, sterilization…" autocomplete="off" />
+      <button class="btn btn-primary btn-sm">Search</button>
+    </div>
+  </div>
+</section>
+
+<!-- Results -->
+<section class="section">
+  <div class="container">
+
+    <!-- Filter bar -->
+    <div class="sf-bar">
+      <button class="sf-btn active" data-filter="all">All</button>
+      <button class="sf-btn" data-filter="page">Pages</button>
+      <button class="sf-btn" data-filter="1st year">1st Year</button>
+      <button class="sf-btn" data-filter="2nd year">2nd Year</button>
+      <button class="sf-btn" data-filter="chapter">Chapters</button>
+    </div>
+
+    <!-- Results output -->
+    <div id="pageSearchResults">
+      <!-- populated by JS -->
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<button id="backToTop"><i class="fa-solid fa-arrow-up"></i></button>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <div class="footer-logo"><i class="fa-solid fa-flask-vial"></i></div>
+          <span class="footer-brand-name">D-Pharma Learn</span>
+        </div>
+        <p class="footer-desc">Free educational platform for Diploma in Pharmacy students.</p>
+        <div class="footer-social">
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#"><i class="fa-brands fa-telegram"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>1st Year</h4><ul>
+        <li><a href="subject.html">Pharmaceutics I</a></li>
+        <li><a href="subject.html">Pharmaceutical Chemistry I</a></li>
+        <li><a href="subject.html">Pharmacognosy</a></li>
+        <li><a href="subject.html">Anatomy &amp; Physiology</a></li>
+        <li><a href="subject.html">Social Pharmacy</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>2nd Year</h4><ul>
+        <li><a href="subject.html">Pharmaceutics II</a></li>
+        <li><a href="subject.html">Pharmacology</a></li>
+        <li><a href="subject.html">Community Pharmacy</a></li>
+        <li><a href="subject.html">Hospital Pharmacy</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Quick Links</h4><ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="syllabus.html">Syllabus</a></li>
+        <li><a href="search.html">Search</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 D-Pharma Learn. Free education for pharmacy students.</p>
+      <p>Made with ❤️ for D-Pharma Students</p>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
