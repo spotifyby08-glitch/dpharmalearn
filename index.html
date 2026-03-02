@@ -1,62 +1,307 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-  <html lang="en" data-theme="night">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Free D-Pharma Notes & Study Material | Diploma in Pharmacy Online Learning</title>
-  <meta name="description" content="Free D-Pharma (Diploma in Pharmacy) notes, chapter-wise study material, videos and PDFs for 1st Year and 2nd Year students. Covers Pharmaceutics, Pharmacology, Chemistry & more." />
-  <meta name="keywords" content="D-Pharma notes, diploma in pharmacy, free pharmacy notes, pharmaceutics notes, pharmacology notes, D-Pharma 1st year, D-Pharma 2nd year" />
+  <meta name="description" content="Free D-Pharma (Diploma in Pharmacy) notes, chapter-wise study material for 1st Year and 2nd Year students. Covers Pharmaceutics, Pharmacology, Chemistry & more." />
+  <meta name="keywords" content="D-Pharma notes, diploma in pharmacy, free pharmacy notes, pharmaceutics notes, pharmacology notes" />
   <meta name="robots" content="index, follow" />
-  <meta name="author" content="D-Pharma Learn" />
   <link rel="canonical" href="https://dpharmalearn.github.io/index.html" />
-
-  <!-- Open Graph -->
   <meta property="og:title" content="Free D-Pharma Notes & Study Material" />
-  <meta property="og:description" content="Chapter-wise D-Pharma study notes, PDFs and video lectures for 1st & 2nd Year students. 100% free forever." />
+  <meta property="og:description" content="Chapter-wise D-Pharma study notes for 1st & 2nd Year students. 100% free forever." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://dpharmalearn.github.io/index.html" />
-  <meta property="og:image" content="https://dpharmalearn.github.io/assets/images/og-image.png" />
-  <meta property="og:site_name" content="D-Pharma Learn" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Free D-Pharma Notes & Study Material" />
-  <meta name="twitter:description" content="Free chapter-wise D-Pharma notes for 1st and 2nd year students." />
-
-  <!-- Schema.org -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "EducationalOrganization",
-    "name": "D-Pharma Learn",
-    "description": "Free Diploma in Pharmacy educational platform",
-    "url": "https://dpharmalearn.github.io",
-    "educationalCredentialAwarded": "Diploma in Pharmacy",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "INR"
-    }
-  }
-  </script>
-
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"EducationalOrganization","name":"D-Pharma Learn","description":"Free Diploma in Pharmacy educational platform","url":"https://dpharmalearn.github.io","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}</script>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    /* ── HOME PAGE SPECIFIC STYLES ── */
+
+    /* Hero */
+    .home-hero {
+      background: linear-gradient(135deg, #1e2e6e 0%, #1e3a8a 50%, #0d5c5c 100%);
+      padding: 3.5rem 0 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .home-hero::before {
+      content:'';
+      position:absolute;inset:0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .home-hero::after {
+      content:'';
+      position:absolute;
+      bottom:-2px;left:0;right:0;height:60px;
+      background: var(--bg);
+      clip-path: ellipse(55% 100% at 50% 100%);
+    }
+    .hero-inner {
+      position:relative;z-index:1;
+      text-align:center;
+      padding: 0 1.25rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .hero-pill {
+      display:inline-flex;align-items:center;gap:.45rem;
+      background:rgba(255,255,255,.12);
+      border:1px solid rgba(255,255,255,.2);
+      border-radius:50px;
+      padding:.35rem 1rem;
+      font-size:.78rem;font-weight:700;
+      color:rgba(255,255,255,.9);
+      letter-spacing:.06em;text-transform:uppercase;
+      margin-bottom:1.25rem;
+      backdrop-filter:blur(8px);
+    }
+    .hero-pill i { color:#4ade80; }
+    .hero-title {
+      font-family:'DM Serif Display',Georgia,serif;
+      font-size:clamp(2rem,6vw,3rem);
+      color:#fff;line-height:1.15;
+      margin-bottom:1rem;
+    }
+    .hero-title span { color:#fbbf24; }
+    .hero-subtitle {
+      font-size:clamp(.9rem,2.5vw,1.05rem);
+      color:rgba(255,255,255,.75);
+      margin-bottom:2rem;
+      line-height:1.7;
+    }
+    .hero-btns {
+      display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap;
+      margin-bottom:2.5rem;
+    }
+    .hero-btn-primary {
+      background:#fff;color:#1e2e6e;
+      padding:.75rem 1.75rem;border-radius:50px;
+      font-weight:800;font-size:.95rem;
+      text-decoration:none;display:inline-flex;align-items:center;gap:.5rem;
+      box-shadow:0 8px 24px rgba(0,0,0,.2);
+      transition:all .2s;
+    }
+    .hero-btn-primary:hover { background:#f0f4ff;color:#1e2e6e;transform:translateY(-2px); }
+    .hero-btn-secondary {
+      background:rgba(255,255,255,.12);color:#fff;
+      border:1.5px solid rgba(255,255,255,.3);
+      padding:.75rem 1.75rem;border-radius:50px;
+      font-weight:700;font-size:.95rem;
+      text-decoration:none;display:inline-flex;align-items:center;gap:.5rem;
+      transition:all .2s;backdrop-filter:blur(8px);
+    }
+    .hero-btn-secondary:hover { background:rgba(255,255,255,.2);color:#fff; }
+    .hero-stats {
+      display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;
+    }
+    .hero-stat { text-align:center; }
+    .hero-stat-num { font-size:1.6rem;font-weight:800;color:#fff;font-family:'DM Serif Display',Georgia,serif; }
+    .hero-stat-lbl { font-size:.72rem;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:.07em;font-weight:600; }
+
+    /* Search bar on hero */
+    .hero-search {
+      max-width:480px;margin:0 auto 2rem;
+      background:rgba(255,255,255,.12);
+      border:1.5px solid rgba(255,255,255,.25);
+      border-radius:50px;
+      display:flex;align-items:center;gap:.75rem;
+      padding:.6rem .6rem .6rem 1.25rem;
+      backdrop-filter:blur(12px);
+      cursor:pointer;transition:all .2s;
+    }
+    .hero-search:hover { background:rgba(255,255,255,.18);border-color:rgba(255,255,255,.4); }
+    .hero-search i { color:rgba(255,255,255,.6); }
+    .hero-search span { flex:1;color:rgba(255,255,255,.55);font-size:.9rem; }
+    .hero-search-btn {
+      background:#fff;color:#1e2e6e;
+      border:none;border-radius:50px;
+      padding:.45rem 1rem;font-size:.8rem;font-weight:700;
+      cursor:pointer;transition:all .2s;
+    }
+
+    /* Section titles */
+    .home-section-head {
+      display:flex;align-items:center;justify-content:space-between;
+      margin-bottom:1.5rem;flex-wrap:wrap;gap:.75rem;
+    }
+    .home-section-head h2 {
+      font-size:clamp(1.3rem,3vw,1.75rem);
+      color:var(--primary-dark);margin:0;
+    }
+    .home-section-head a {
+      font-size:.82rem;font-weight:700;color:var(--primary-light);
+      display:flex;align-items:center;gap:.35rem;
+      text-decoration:none;white-space:nowrap;
+    }
+    .home-section-head a:hover { color:var(--secondary); }
+
+    /* Subject cards grid */
+    .subjects-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+      gap:1.1rem;
+    }
+    .subject-card {
+      background:var(--surface);
+      border-radius:16px;
+      border:1.5px solid var(--border);
+      padding:1.4rem;
+      text-decoration:none;
+      display:block;
+      transition:all .22s ease;
+      position:relative;
+      overflow:hidden;
+    }
+    .subject-card::before {
+      content:'';
+      position:absolute;top:0;left:0;right:0;height:4px;
+      background:var(--card-accent, linear-gradient(90deg,#1e3a8a,#3b5bdb));
+      border-radius:16px 16px 0 0;
+    }
+    .subject-card:hover {
+      transform:translateY(-5px);
+      box-shadow:0 16px 48px rgba(30,58,138,.14);
+      border-color:rgba(59,91,219,.25);
+    }
+    .subject-card:hover .sc-arrow { transform:translateX(4px); }
+    .sc-top { display:flex;align-items:flex-start;justify-content:space-between;gap:.75rem;margin-bottom:1rem; }
+    .sc-icon {
+      width:48px;height:48px;border-radius:12px;
+      display:flex;align-items:center;justify-content:center;
+      font-size:1.4rem;flex-shrink:0;
+    }
+    .sc-year-badge {
+      font-size:.68rem;font-weight:700;padding:.2rem .65rem;
+      border-radius:50px;text-transform:uppercase;letter-spacing:.06em;
+      white-space:nowrap;
+    }
+    .sc-title { font-size:1rem;font-weight:800;color:var(--primary-dark);margin-bottom:.3rem;line-height:1.3; }
+    .sc-desc { font-size:.8rem;color:var(--text-muted);line-height:1.55;margin-bottom:1rem; }
+    .sc-footer { display:flex;align-items:center;justify-content:space-between; }
+    .sc-chapters { font-size:.75rem;color:var(--text-muted);display:flex;align-items:center;gap:.35rem; }
+    .sc-arrow { color:var(--primary-light);font-size:.85rem;transition:transform .2s; }
+
+    /* Year tab buttons */
+    .year-tabs {
+      display:flex;gap:.5rem;margin-bottom:2rem;
+      background:var(--bg-alt);
+      border-radius:50px;
+      padding:.3rem;
+      width:fit-content;
+    }
+    .year-tab {
+      padding:.5rem 1.4rem;border-radius:50px;
+      font-size:.85rem;font-weight:700;
+      border:none;background:transparent;
+      color:var(--text-muted);cursor:pointer;
+      transition:all .2s;
+    }
+    .year-tab.active {
+      background:var(--primary-light);
+      color:#fff;
+      box-shadow:0 4px 12px rgba(59,91,219,.3);
+    }
+
+    /* Quick links strip */
+    .quick-links {
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:.75rem;
+      margin-bottom:3rem;
+    }
+    .quick-link {
+      background:var(--surface);
+      border:1.5px solid var(--border);
+      border-radius:14px;
+      padding:1.1rem .85rem;
+      text-align:center;
+      text-decoration:none;
+      transition:all .2s;
+      display:block;
+    }
+    .quick-link:hover { transform:translateY(-3px);box-shadow:var(--shadow);border-color:rgba(59,91,219,.2); }
+    .ql-icon {
+      width:42px;height:42px;border-radius:10px;
+      display:flex;align-items:center;justify-content:center;
+      margin:0 auto .6rem;font-size:1.1rem;
+    }
+    .ql-label { font-size:.75rem;font-weight:700;color:var(--text);line-height:1.3; }
+
+    /* Notice banner */
+    .notice-banner {
+      background:linear-gradient(135deg,#fef3c7,#fde68a);
+      border:1.5px solid #f59e0b;
+      border-radius:14px;
+      padding:1rem 1.25rem;
+      display:flex;align-items:center;gap:.85rem;
+      margin-bottom:2.5rem;
+    }
+    .notice-banner i { color:#d97706;font-size:1.1rem;flex-shrink:0; }
+    .notice-banner p { margin:0;font-size:.85rem;color:#78350f;font-weight:600; }
+    .notice-banner span { font-weight:400;color:#92400e; }
+
+    /* Features row */
+    .features-strip {
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:1rem;
+      margin-bottom:3.5rem;
+    }
+    .feat-card {
+      background:var(--surface);
+      border:1.5px solid var(--border);
+      border-radius:14px;
+      padding:1.25rem;
+      text-align:center;
+    }
+    .feat-icon {
+      width:44px;height:44px;border-radius:12px;
+      display:flex;align-items:center;justify-content:center;
+      margin:0 auto .75rem;font-size:1.1rem;
+    }
+    .feat-title { font-size:.85rem;font-weight:800;color:var(--primary-dark);margin-bottom:.3rem; }
+    .feat-desc { font-size:.75rem;color:var(--text-muted);line-height:1.5;margin:0; }
+
+    /* Dark mode */
+    [data-theme="dark"] .subject-card { background:#1e293b;border-color:#334155; }
+    [data-theme="dark"] .subject-card:hover { border-color:rgba(59,91,219,.4); }
+    [data-theme="dark"] .sc-title { color:#e2e8f0; }
+    [data-theme="dark"] .quick-link { background:#1e293b;border-color:#334155; }
+    [data-theme="dark"] .feat-card { background:#1e293b;border-color:#334155; }
+    [data-theme="dark"] .ql-label { color:#e2e8f0; }
+    [data-theme="dark"] .feat-title { color:#e2e8f0; }
+    [data-theme="dark"] .year-tabs { background:#1e293b; }
+    [data-theme="dark"] .home-section-head h2 { color:#e2e8f0; }
+    [data-theme="dark"] .notice-banner { background:linear-gradient(135deg,#3a2500,#4a3000);border-color:#854d0e; }
+    [data-theme="dark"] .notice-banner p { color:#fde68a; }
+    [data-theme="dark"] .notice-banner span { color:#fcd34d; }
+
+    /* Mobile responsive */
+    @media(max-width:640px) {
+      .quick-links { grid-template-columns:repeat(2,1fr); }
+      .features-strip { grid-template-columns:1fr; }
+      .hero-stats { gap:1.25rem; }
+    }
+    @media(max-width:480px) {
+      .subjects-grid { grid-template-columns:1fr; }
+      .hero-btns { flex-direction:column;align-items:center; }
+      .hero-btn-primary,.hero-btn-secondary { width:100%;max-width:280px;justify-content:center; }
+    }
+  </style>
 </head>
 <body>
 
 <!-- ════ HEADER ════ -->
-<header class="site-header" role="banner">
-  <nav class="nav-container" aria-label="Main navigation">
-    <a class="nav-brand" href="index.html" aria-label="D-Pharma Learn Home">
-      <div class="nav-logo" aria-hidden="true"><i class="fa-solid fa-flask-vial"></i></div>
+<header class="site-header">
+  <nav class="nav-container">
+    <a class="nav-brand" href="index.html">
+      <div class="nav-logo"><i class="fa-solid fa-flask-vial"></i></div>
       <div class="nav-brand-text">
         <span class="nav-brand-name">D-Pharma Learn</span>
         <span class="nav-brand-tag">Free Education</span>
       </div>
     </a>
-    <ul class="nav-links" role="list">
+    <ul class="nav-links">
       <li><a href="index.html" class="active">Home</a></li>
       <li><a href="year1.html">1st Year</a></li>
       <li><a href="year2.html">2nd Year</a></li>
@@ -68,9 +313,7 @@
       <button class="search-toggle-btn" id="searchToggle" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
       <button class="theme-toggle-btn" id="themeToggle" aria-label="Toggle theme"><i class="fa-solid fa-moon" id="themeIcon"></i></button>
       <a href="year1.html" class="btn btn-primary btn-sm">Start Learning</a>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
     </div>
   </nav>
 </header>
@@ -91,7 +334,7 @@
 </div>
 
 <!-- Mobile Nav -->
-<nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+<nav class="mobile-nav" id="mobileNav">
   <a href="index.html">Home</a>
   <a href="year1.html">1st Year</a>
   <a href="year2.html">2nd Year</a>
@@ -101,397 +344,123 @@
   <a href="year1.html" class="btn btn-primary">Start Learning Free</a>
 </nav>
 
-<!-- ════ HERO ════ -->
-<main id="main-content">
-<section class="hero" aria-labelledby="hero-heading">
-  <div class="hero-grid" aria-hidden="true"></div>
-  <div class="hero-visual" aria-hidden="true">⚗</div>
-  <div class="container">
-    <div class="hero-content">
-      <div class="hero-badge fade-up">
-        <span class="badge badge-secondary"><i class="fa-solid fa-star"></i> 100% Free Forever</span>
+<main>
+
+  <!-- ════ HERO ════ -->
+  <section class="home-hero">
+    <div class="hero-inner">
+      <div class="hero-pill"><i class="fa-solid fa-circle-check"></i> 100% Free Forever</div>
+      <h1 class="hero-title">Free <span>D-Pharma</span><br>Notes &amp; Courses</h1>
+      <p class="hero-subtitle">Chapter-wise study material for all 10 subjects of Diploma in Pharmacy — 1st Year &amp; 2nd Year. Prepared as per PCI syllabus.</p>
+
+      <!-- Search trigger -->
+      <div class="hero-search" id="heroSearchTrigger">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <span>Search subjects, chapters, topics…</span>
+        <button class="hero-search-btn">Search</button>
       </div>
-      <h1 id="hero-heading" class="fade-up fade-up-1">
-        Free <span>D-Pharma</span><br>Notes & Courses
-      </h1>
-      <p class="hero-desc fade-up fade-up-2">
-        Comprehensive chapter-wise study material for Diploma in Pharmacy students. Access notes, PDFs, and video lectures for 1st Year and 2nd Year — completely free, no login required.
-      </p>
-      <div class="hero-actions fade-up fade-up-3">
-        <a href="year1.html" class="btn btn-secondary btn-lg">
-          <i class="fa-solid fa-1"></i> 1st Year Notes
+
+      <div class="hero-btns">
+        <a href="year1.html" class="hero-btn-primary"><i class="fa-solid fa-book-open"></i> 1st Year Notes</a>
+        <a href="year2.html" class="hero-btn-secondary"><i class="fa-solid fa-flask-vial"></i> 2nd Year Notes</a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="hero-stat-num">10</div><div class="hero-stat-lbl">Subjects</div></div>
+        <div class="hero-stat"><div class="hero-stat-num">70+</div><div class="hero-stat-lbl">Chapters</div></div>
+        <div class="hero-stat"><div class="hero-stat-num">100%</div><div class="hero-stat-lbl">Free</div></div>
+        <div class="hero-stat"><div class="hero-stat-num">PCI</div><div class="hero-stat-lbl">Syllabus</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ MAIN CONTENT ════ -->
+  <section style="padding:2.5rem 0 4rem;">
+    <div class="container">
+
+      <!-- Notice -->
+      <div class="notice-banner reveal">
+        <i class="fa-solid fa-bullhorn"></i>
+        <p>📢 New Notes Added! <span>Pharmaceutics I — Chapter 1, 2 &amp; 3 are now live. More chapters coming soon!</span></p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="home-section-head reveal">
+        <h2>Quick Access</h2>
+      </div>
+      <div class="quick-links reveal">
+        <a href="year1.html" class="quick-link">
+          <div class="ql-icon" style="background:#eff6ff;color:#1e3a8a;"><i class="fa-solid fa-1"></i></div>
+          <div class="ql-label">1st Year</div>
         </a>
-        <a href="year2.html" class="btn btn-ghost btn-lg">
-          <i class="fa-solid fa-2"></i> 2nd Year Notes
+        <a href="year2.html" class="quick-link">
+          <div class="ql-icon" style="background:#f0fdfa;color:#0d9488;"><i class="fa-solid fa-2"></i></div>
+          <div class="ql-label">2nd Year</div>
+        </a>
+        <a href="syllabus.html" class="quick-link">
+          <div class="ql-icon" style="background:#fef3c7;color:#d97706;"><i class="fa-solid fa-list-check"></i></div>
+          <div class="ql-label">Syllabus</div>
+        </a>
+        <a href="search.html" class="quick-link">
+          <div class="ql-icon" style="background:#fdf4ff;color:#9333ea;"><i class="fa-solid fa-magnifying-glass"></i></div>
+          <div class="ql-label">Search Notes</div>
         </a>
       </div>
-      <div class="hero-stats fade-up fade-up-4">
-        <div class="stat-item">
-          <span class="stat-num">10</span>
-          <span class="stat-label">Subjects Covered</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-num">100+</span>
-          <span class="stat-label">Chapters</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-num">100%</span>
-          <span class="stat-label">Free Access</span>
-        </div>
+
+      <!-- Subjects Section with Year Tabs -->
+      <div class="home-section-head reveal">
+        <h2>All Subjects</h2>
+        <a href="year1.html">View All <i class="fa-solid fa-arrow-right"></i></a>
       </div>
-    </div>
-  </div>
-</section>
 
-<!-- ════ NOTICE ════ -->
-<section class="section-sm" style="padding: 2rem 0;">
-  <div class="container">
-    <div class="notice-bar">
-      <i class="fa-solid fa-bell"></i>
-      <p>New chapters are added regularly. Bookmark this site and share it with your classmates! No login, no payment — ever.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ════ FEATURES ════ -->
-<section class="section" aria-labelledby="features-heading">
-  <div class="container">
-    <div class="text-center">
-      <span class="section-label">Why Choose Us</span>
-      <h2 class="section-title" id="features-heading">Everything You Need to Excel</h2>
-      <p class="section-desc">Designed by pharmacy educators for D-Pharma students. Clean notes, structured learning, no distractions.</p>
-    </div>
-    <div class="features-grid reveal">
-      <div class="feature-card">
-        <div class="feature-icon">📚</div>
-        <div class="feature-title">Chapter-wise Notes</div>
-        <p class="feature-desc">Organized, structured notes for every chapter across all 10 D-Pharma subjects. Easy to read and understand.</p>
+      <!-- Year tabs -->
+      <div class="year-tabs reveal" id="yearTabs">
+        <button class="year-tab active" data-year="1">📚 1st Year</button>
+        <button class="year-tab" data-year="2">📗 2nd Year</button>
       </div>
-      <div class="feature-card">
-        <div class="feature-icon">📄</div>
-        <div class="feature-title">PDF Downloads</div>
-        <p class="feature-desc">Downloadable PDF notes for offline study. Prepare for exams even without internet access.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🎥</div>
-        <div class="feature-title">Video Lectures</div>
-        <p class="feature-desc">Embedded YouTube video lectures to help you understand complex pharmacy concepts visually.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">📱</div>
-        <div class="feature-title">Mobile Friendly</div>
-        <p class="feature-desc">Study on any device — phone, tablet or computer. Optimized for low-end Android phones too.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🆓</div>
-        <div class="feature-title">Always Free</div>
-        <p class="feature-desc">No hidden fees, no premium plans, no login required. Education should be free and accessible for all.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🔄</div>
-        <div class="feature-title">Regularly Updated</div>
-        <p class="feature-desc">Content is updated regularly to match current D-Pharma curriculum and exam patterns.</p>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- ════ 1ST YEAR SUBJECTS ════ -->
-<section class="section" style="background: var(--bg-alt);" aria-labelledby="year1-heading">
-  <div class="container">
-    <div class="text-center">
-      <span class="section-label">Year One</span>
-      <h2 class="section-title" id="year1-heading">D-Pharma 1st Year Subjects</h2>
-      <p class="section-desc">Five core subjects covering foundational pharmacy knowledge, anatomy, and social aspects of healthcare.</p>
-    </div>
-    <div class="grid-auto reveal">
+      <!-- 1st Year Cards -->
+      <div class="subjects-grid" id="year1Cards">
+        <a href="subject.html" class="subject-card reveal" style="--card-accent:linear-gradient(90deg,#1e3a8a,#3b5bdb);">
+          <div class="sc-top">
+            <div class="sc-icon" style="background:#eff6ff;color:#1e3a8a;"><i class="fa-solid fa-mortar-pestle"></i></div>
+            <span class="sc-year-badge" style="background:#eff6ff;color:#1e3a8a;">1st Year</span>
+          </div>
+          <div class="sc-title">Pharmaceutics I</div>
+          <div class="sc-desc">Dosage forms, solutions, suspensions, emulsions, tablets, capsules and pharmaceutical packaging.</div>
+          <div class="sc-footer">
+            <span class="sc-chapters"><i class="fa-solid fa-book-open"></i> 10 Chapters</span>
+            <i class="fa-solid fa-arrow-right sc-arrow"></i>
+          </div>
+        </a>
 
-      <article class="card subject-card">
-        <div class="subject-card-header">
-          <span class="badge badge-primary">Pharmaceutics I</span>
-          <h3 class="card-title" style="margin-top:.6rem;">Pharmaceutics I</h3>
-        </div>
-        <div class="subject-card-body">
-          <ul>
-            <li>History of Pharmacy</li>
-            <li>Dosage Forms & Routes</li>
-            <li>Solutions & Suspensions</li>
-            <li>Emulsions & Creams</li>
-            <li>Powders & Tablets</li>
-          </ul>
-        </div>
-        <div class="subject-card-footer">
-          <a href="subject.html?subject=pharmaceutics-1&year=1" class="btn btn-primary btn-sm">View Chapters <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-      </article>
+        <a href="subject.html" class="subject-card reveal" style="--card-accent:linear-gradient(90deg,#0d5c5c,#0d9488);">
+          <div class="sc-top">
+            <div class="sc-icon" style="background:#f0fdfa;color:#0d9488;"><i class="fa-solid fa-atom"></i></div>
+            <span class="sc-year-badge" style="background:#f0fdfa;color:#0d9488;">1st Year</span>
+          </div>
+          <div class="sc-title">Pharmaceutical Chemistry I</div>
+          <div class="sc-desc">Atomic structure, acids, bases, volumetric analysis and inorganic pharmaceutical compounds.</div>
+          <div class="sc-footer">
+            <span class="sc-chapters"><i class="fa-solid fa-book-open"></i> 9 Chapters</span>
+            <i class="fa-solid fa-arrow-right sc-arrow"></i>
+          </div>
+        </a>
 
-      <article class="card subject-card">
-        <div class="subject-card-header">
-          <span class="badge badge-secondary">Chem I</span>
-          <h3 class="card-title" style="margin-top:.6rem;">Pharmaceutical Chemistry I</h3>
-        </div>
-        <div class="subject-card-body">
-          <ul>
-            <li>Atomic Structure & Bonding</li>
-            <li>Acids, Bases & Salts</li>
-            <li>Volumetric Analysis</li>
-            <li>Inorganic Compounds</li>
-            <li>Gastrointestinal Agents</li>
-          </ul>
-        </div>
-        <div class="subject-card-footer">
-          <a href="subject.html?subject=pharma-chem-1&year=1" class="btn btn-primary btn-sm">View Chapters <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-      </article>
+        <a href="subject.html" class="subject-card reveal" style="--card-accent:linear-gradient(90deg,#3f6212,#65a30d);">
+          <div class="sc-top">
+            <div class="sc-icon" style="background:#f7fee7;color:#4d7c0f;"><i class="fa-solid fa-leaf"></i></div>
+            <span class="sc-year-badge" style="background:#f7fee7;color:#4d7c0f;">1st Year</span>
+          </div>
+          <div class="sc-title">Pharmacognosy</div>
+          <div class="sc-desc">Crude drugs, alkaloids, glycosides, tannins, volatile oils, gums and plant-based medicines.</div>
+          <div class="sc-footer">
+            <span class="sc-chapters"><i class="fa-solid fa-book-open"></i> 9 Chapters</span>
+            <i class="fa-solid fa-arrow-right sc-arrow"></i>
+          </div>
+        </a>
 
-      <article class="card subject-card">
-        <div class="subject-card-header">
-          <span class="badge badge-accent">Pharmacognosy</span>
-          <h3 class="card-title" style="margin-top:.6rem;">Pharmacognosy</h3>
-        </div>
-        <div class="subject-card-body">
-          <ul>
-            <li>Introduction to Crude Drugs</li>
-            <li>Plant Taxonomy</li>
-            <li>Alkaloids & Glycosides</li>
-            <li>Tannins & Resins</li>
-            <li>Volatile Oils</li>
-          </ul>
-        </div>
-        <div class="subject-card-footer">
-          <a href="subject.html?subject=pharmacognosy&year=1" class="btn btn-primary btn-sm">View Chapters <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-      </article>
-
-      <article class="card subject-card">
-        <div class="subject-card-header">
-          <span class="badge badge-primary">HAP</span>
-          <h3 class="card-title" style="margin-top:.6rem;">Human Anatomy & Physiology</h3>
-        </div>
-        <div class="subject-card-body">
-          <ul>
-            <li>Cell Biology</li>
-            <li>Skeletal & Muscular System</li>
-            <li>Cardiovascular System</li>
-            <li>Respiratory System</li>
-            <li>Nervous System</li>
-          </ul>
-        </div>
-        <div class="subject-card-footer">
-          <a href="subject.html?subject=anatomy-physiology&year=1" class="btn btn-primary btn-sm">View Chapters <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-      </article>
-
-      <article class="card subject-card">
-        <div class="subject-card-header">
-          <span class="badge badge-secondary">Social</span>
-          <h3 class="card-title" style="margin-top:.6rem;">Social Pharmacy</h3>
-        </div>
-        <div class="subject-card-body">
-          <ul>
-            <li>Social & Preventive Pharmacy</li>
-            <li>Health Education</li>
-            <li>National Health Programs</li>
-            <li>Mother & Child Health</li>
-            <li>Environmental Hygiene</li>
-          </ul>
-        </div>
-        <div class="subject-card-footer">
-          <a href="subject.html?subject=social-pharmacy&year=1" class="btn btn-primary btn-sm">View Chapters <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-      </article>
-
-    </div>
-    <div class="text-center" style="margin-top:2.5rem;">
-      <a href="year1.html" class="btn btn-outline">View All 1st Year Content <i class="fa-solid fa-arrow-right"></i></a>
-    </div>
-  </div>
-</section>
-
-<!-- ════ 2ND YEAR SUBJECTS ════ -->
-<section class="section" aria-labelledby="year2-heading">
-  <div class="container">
-    <div class="text-center">
-      <span class="section-label">Year Two</span>
-      <h2 class="section-title" id="year2-heading">D-Pharma 2nd Year Subjects</h2>
-      <p class="section-desc">Advanced pharmacy subjects covering pharmacology, clinical pharmacy, and community health practice.</p>
-    </div>
-    <div class="grid-auto reveal">
-
-      <article class="card subject-card">
-        <div class="subject-card-header">
-          <span class="badge badge-primary">Pharmaceutics II</span>
-          <h3 class="card-title" style="margin-top:.6rem;">Pharmaceutics II</h3>
-        </div>
-        <div class="subject-card-body">
-          <ul>
-            <li>Sterilization Methods</li>
-            <li>Parenteral Products</li>
-            <li>Ophthalmic Preparations</li>
-            <li>Suppositories & Pessaries</li>
-            <li>Aerosols & Inhalers</li>
-          </ul>
-        </div>
-        <div class="subject-card-footer">
-          <a href="subject.html?subject=pharmaceutics-2&year=2" class="btn btn-secondary btn-sm">View Chapters <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-      </article>
-
-      <article class="card subject-card">
-        <div class="subject-card-header">
-          <span class="badge badge-secondary">Chem II</span>
-          <h3 class="card-title" style="margin-top:.6rem;">Pharmaceutical Chemistry II</h3>
-        </div>
-        <div class="subject-card-body">
-          <ul>
-            <li>Organic Functional Groups</li>
-            <li>Sulfonamides & Antibiotics</li>
-            <li>Analgesics & Antipyretics</li>
-            <li>Vitamins & Hormones</li>
-            <li>Antifungals & Antivirals</li>
-          </ul>
-        </div>
-        <div class="subject-card-footer">
-          <a href="subject.html?subject=pharma-chem-2&year=2" class="btn btn-secondary btn-sm">View Chapters <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-      </article>
-
-      <article class="card subject-card">
-        <div class="subject-card-header">
-          <span class="badge badge-accent">Pharmacology</span>
-          <h3 class="card-title" style="margin-top:.6rem;">Pharmacology</h3>
-        </div>
-        <div class="subject-card-body">
-          <ul>
-            <li>Drug Action & Receptors</li>
-            <li>Autonomic Nervous System</li>
-            <li>CNS Drugs</li>
-            <li>Cardiovascular Drugs</li>
-            <li>Chemotherapy</li>
-          </ul>
-        </div>
-        <div class="subject-card-footer">
-          <a href="subject.html?subject=pharmacology&year=2" class="btn btn-secondary btn-sm">View Chapters <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-      </article>
-
-      <article class="card subject-card">
-        <div class="subject-card-header">
-          <span class="badge badge-primary">Community</span>
-          <h3 class="card-title" style="margin-top:.6rem;">Community Pharmacy</h3>
-        </div>
-        <div class="subject-card-body">
-          <ul>
-            <li>Retail Pharmacy Practice</li>
-            <li>Prescription Handling</li>
-            <li>Patient Counseling</li>
-            <li>Drug Store Management</li>
-            <li>Controlled Substances Act</li>
-          </ul>
-        </div>
-        <div class="subject-card-footer">
-          <a href="subject.html?subject=community-pharmacy&year=2" class="btn btn-secondary btn-sm">View Chapters <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-      </article>
-
-      <article class="card subject-card">
-        <div class="subject-card-header">
-          <span class="badge badge-secondary">Hospital</span>
-          <h3 class="card-title" style="margin-top:.6rem;">Hospital & Clinical Pharmacy</h3>
-        </div>
-        <div class="subject-card-body">
-          <ul>
-            <li>Hospital Pharmacy Functions</li>
-            <li>Drug Distribution Systems</li>
-            <li>Clinical Pharmacy Practice</li>
-            <li>Adverse Drug Reactions</li>
-            <li>Drug Interactions</li>
-          </ul>
-        </div>
-        <div class="subject-card-footer">
-          <a href="subject.html?subject=hospital-pharmacy&year=2" class="btn btn-secondary btn-sm">View Chapters <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-      </article>
-
-    </div>
-    <div class="text-center" style="margin-top:2.5rem;">
-      <a href="year2.html" class="btn btn-outline">View All 2nd Year Content <i class="fa-solid fa-arrow-right"></i></a>
-    </div>
-  </div>
-</section>
-
-<!-- ════ CTA ════ -->
-<section class="section">
-  <div class="container">
-    <div class="cta-banner reveal">
-      <h2>Start Learning Today — It's Completely Free</h2>
-      <p>Join thousands of D-Pharma students who are using our platform to study smarter and score better in their exams.</p>
-      <div class="btn-group">
-        <a href="year1.html" class="btn btn-secondary btn-lg"><i class="fa-solid fa-graduation-cap"></i> 1st Year</a>
-        <a href="year2.html" class="btn btn-ghost btn-lg"><i class="fa-solid fa-graduation-cap"></i> 2nd Year</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-</main>
-
-<!-- ════ FOOTER ════ -->
-<footer class="site-footer" role="contentinfo">
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <div class="footer-brand">
-          <div class="footer-logo"><i class="fa-solid fa-flask-vial"></i></div>
-          <span class="footer-brand-name">D-Pharma Learn</span>
-        </div>
-        <p class="footer-desc">A free educational platform dedicated to helping Diploma in Pharmacy students access quality study material, chapter notes, PDFs, and video lectures at no cost.</p>
-        <div class="footer-social">
-          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h4>1st Year</h4>
-        <ul>
-          <li><a href="subject.html?subject=pharmaceutics-1&year=1">Pharmaceutics I</a></li>
-          <li><a href="subject.html?subject=pharma-chem-1&year=1">Pharma Chemistry I</a></li>
-          <li><a href="subject.html?subject=pharmacognosy&year=1">Pharmacognosy</a></li>
-          <li><a href="subject.html?subject=anatomy-physiology&year=1">Anatomy & Physiology</a></li>
-          <li><a href="subject.html?subject=social-pharmacy&year=1">Social Pharmacy</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>2nd Year</h4>
-        <ul>
-          <li><a href="subject.html?subject=pharmaceutics-2&year=2">Pharmaceutics II</a></li>
-          <li><a href="subject.html?subject=pharma-chem-2&year=2">Pharma Chemistry II</a></li>
-          <li><a href="subject.html?subject=pharmacology&year=2">Pharmacology</a></li>
-          <li><a href="subject.html?subject=community-pharmacy&year=2">Community Pharmacy</a></li>
-          <li><a href="subject.html?subject=hospital-pharmacy&year=2">Hospital Pharmacy</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="year1.html">1st Year</a></li>
-          <li><a href="year2.html">2nd Year</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="sitemap.xml">Sitemap</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 D-Pharma Learn. All rights reserved. Free education for pharmacy students.</p>
-      <p>Made with love for D-Pharma Students</p>
-    </div>
-  </div>
-</footer>
-
-<button id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
-<script src="js/main.js"></script>
-</body>
-</html>
+        <a href="subject.html" class="subject-card reveal" style="--card-accent:linear-gradient(90deg,#5b21b6,#7c3aed);">
+          <div class="sc-top">
+            <div class="sc-icon" style="background:#fdf4ff;color:#7c3aed;"><i class="fa-solid fa-heart-pulse"></i></div>
+            <spa
