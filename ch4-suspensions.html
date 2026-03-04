@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Suspensions – Chapter 4 | Pharmaceutics I D-Pharma Notes</title>
+  <meta name="description" content="Free notes on Pharmaceutical Suspensions for D-Pharma Pharmaceutics I. Covers definition, types, formulation, suspending agents, evaluation." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    html,body{overflow-x:hidden!important;width:100%;max-width:100%;}
+    main,section,.container,header,footer,article{max-width:100%;overflow-x:hidden;}
+    .two-col-layout{display:block!important;} .sidebar-sticky{display:none!important;}
+    @media(min-width:900px){.two-col-layout{display:grid!important;grid-template-columns:1fr 260px;gap:2rem;align-items:start;}.sidebar-sticky{display:block!important;position:sticky;top:110px;}}
+    .chapter-content{padding:1rem;border-radius:12px;}
+    @media(min-width:640px){.chapter-content{padding:1.75rem;}}
+    .info-box{word-break:break-word;overflow-wrap:break-word;}
+    .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:.75rem 0;border-radius:8px;border:1px solid #e2e8f0;display:block;}
+    .table-wrap table{margin:0;min-width:380px;border-collapse:collapse;width:100%;}
+    th,td{padding:.45rem .6rem;border:1px solid #e2e8f0;font-size:.82rem;}
+    th{background:#f0f4ff;font-weight:700;}
+    .content-nav{flex-direction:column!important;} .content-nav .btn{justify-content:center;}
+    @media(min-width:500px){.content-nav{flex-direction:row!important;}}
+    .site-footer{overflow:hidden;}
+    .footer-grid{display:grid!important;grid-template-columns:1fr!important;gap:1.25rem!important;margin-bottom:1.75rem;}
+    .footer-col ul{display:flex!important;flex-wrap:wrap;gap:.3rem .75rem;}
+    .footer-col ul li a{font-size:.78rem;white-space:nowrap;}
+    .footer-bottom{flex-direction:column!important;align-items:flex-start!important;gap:.25rem!important;}
+    .footer-bottom p{font-size:.72rem;word-break:break-word;}
+    @media(min-width:560px){.footer-grid{grid-template-columns:1fr 1fr!important;}}
+    @media(min-width:1024px){.footer-grid{grid-template-columns:2fr 1fr 1fr 1fr!important;}.footer-col ul{flex-direction:column!important;gap:.5rem;}.footer-bottom{flex-direction:row!important;align-items:center!important;justify-content:space-between!important;}}
+    .search-overlay,#searchOverlay{position:fixed!important;inset:0!important;z-index:99999!important;background:rgba(10,15,35,.88)!important;backdrop-filter:blur(12px)!important;display:flex!important;align-items:flex-start!important;justify-content:center!important;padding-top:4rem!important;opacity:0;pointer-events:none;transition:opacity .2s;}
+    .search-overlay.open,#searchOverlay.open{opacity:1!important;pointer-events:all!important;}
+    .search-overlay .search-box,#searchOverlay .search-box{background:#fff!important;border-radius:18px!important;box-shadow:0 24px 64px rgba(0,0,0,.35)!important;width:calc(100% - 2rem)!important;max-width:540px!important;overflow:hidden!important;transform:translateY(-12px);transition:transform .2s;}
+    .search-overlay.open .search-box,#searchOverlay.open .search-box{transform:translateY(0)!important;}
+    .search-overlay .search-box-top,#searchOverlay .search-box-top{display:flex!important;align-items:center!important;gap:.7rem!important;padding:.9rem 1.1rem!important;border-bottom:1.5px solid #e2e8f0!important;}
+    .search-overlay .search-box-top input,#searchOverlay .search-box-top input{flex:1!important;border:none!important;outline:none!important;font-size:1rem!important;color:#0f172a!important;background:transparent!important;font-family:inherit!important;}
+    .search-overlay .search-x,#searchOverlay .search-x{width:28px!important;height:28px!important;border-radius:6px!important;border:1px solid #e2e8f0!important;background:#f8fafc!important;color:#64748b!important;cursor:pointer!important;font-size:.75rem!important;display:flex!important;align-items:center!important;justify-content:center!important;}
+    .search-overlay .search-results-wrap,#searchOverlay .search-results-wrap{max-height:360px!important;overflow-y:auto!important;padding:.75rem!important;}
+    .search-overlay .search-box-foot,#searchOverlay .search-box-foot{display:none!important;}
+    .search-overlay .search-empty,#searchOverlay .search-empty{text-align:center!important;padding:2rem 1rem!important;color:#94a3b8!important;}
+    .search-overlay .search-empty i,#searchOverlay .search-empty i{font-size:1.75rem!important;display:block!important;margin-bottom:.5rem!important;opacity:.35!important;}
+    .search-overlay .search-empty p,#searchOverlay .search-empty p{font-size:.88rem!important;margin:0!important;}
+    .search-overlay .search-empty small,#searchOverlay .search-empty small{display:none!important;}
+    .search-overlay .search-result-item,#searchOverlay .search-result-item{display:flex!important;align-items:center!important;gap:.7rem!important;padding:.7rem .8rem!important;border-radius:10px!important;text-decoration:none!important;color:#0f172a!important;transition:background .15s!important;}
+    .search-overlay .search-result-item:hover,#searchOverlay .search-result-item:hover{background:#f0f4ff!important;}
+    .search-overlay .sri-icon,#searchOverlay .sri-icon{font-size:1.2rem!important;width:30px!important;text-align:center!important;flex-shrink:0!important;}
+    .search-overlay .sri-info,#searchOverlay .sri-info{flex:1!important;min-width:0!important;}
+    .search-overlay .sri-info strong,#searchOverlay .sri-info strong{display:block!important;font-size:.85rem!important;color:#1e2e6e!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important;}
+    .search-overlay .sri-info span,#searchOverlay .sri-info span{display:block!important;font-size:.77rem!important;color:#64748b!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important;}
+    .search-overlay .sri-tag,#searchOverlay .sri-tag{font-size:.65rem!important;font-weight:700!important;padding:.15rem .45rem!important;border-radius:50px!important;background:#eff6ff!important;color:#1e3a8a!important;flex-shrink:0!important;}
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav-container">
+    <a class="nav-brand" href="index.html">
+      <div class="nav-logo"><i class="fa-solid fa-flask-vial"></i></div>
+      <div class="nav-brand-text">
+        <span class="nav-brand-name">D-Pharma Learn</span>
+        <span class="nav-brand-tag">Free Education</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="year1.html" class="active">1st Year</a></li>
+      <li><a href="year2.html">2nd Year</a></li>
+      <li><a href="syllabus.html">Syllabus</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <div class="nav-cta">
+      <button class="search-toggle-btn" id="searchToggle"><i class="fa-solid fa-magnifying-glass"></i></button>
+      <button class="theme-toggle-btn" id="themeToggle"><i class="fa-solid fa-moon" id="themeIcon"></i></button>
+      <a href="subject.html" class="btn btn-primary btn-sm"><i class="fa-solid fa-arrow-left"></i> All Chapters</a>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+</header>
+
+<div id="searchOverlay">
+  <div class="search-box">
+    <div class="search-box-top">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" id="searchInput" placeholder="Search subjects, chapters, topics…" autocomplete="off" />
+      <button class="search-x" id="searchClose"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="search-results-wrap" id="searchResults"></div>
+  </div>
+</div>
+
+<nav class="mobile-nav" id="mobileNav">
+  <a href="index.html">Home</a><a href="year1.html">1st Year</a>
+  <a href="year2.html">2nd Year</a><a href="syllabus.html">Syllabus</a>
+  <a href="about.html">About</a><a href="contact.html">Contact</a>
+</nav>
+
+<div class="chapter-action-bar">
+  <div class="cab-inner">
+    <div class="cab-left">
+      <span class="read-time"><i class="fa-solid fa-clock"></i> ~18 min read</span>
+      <span class="badge badge-primary">Pharmaceutics I</span>
+      <span class="badge badge-secondary">Chapter 4</span>
+    </div>
+    <div class="cab-right">
+      <button class="print-btn" id="printChapter"><i class="fa-solid fa-print"></i> Print</button>
+      <button class="wa-btn" id="whatsappShare"><i class="fa-brands fa-whatsapp"></i> Share</button>
+    </div>
+  </div>
+</div>
+
+<div class="page-hero">
+  <div class="container">
+    <nav class="breadcrumb">
+      <a href="index.html">Home</a><span>›</span>
+      <a href="year1.html">1st Year</a><span>›</span>
+      <a href="subject.html">Pharmaceutics I</a><span>›</span>
+      <strong>Chapter 4: Suspensions</strong>
+    </nav>
+    <h1>Suspensions</h1>
+    <p>Pharmaceutical suspensions — formulation, types, stability, suspending agents and quality control.</p>
+  </div>
+</div>
+
+<main>
+<section style="padding-top:2rem;">
+  <div class="container">
+    <div class="two-col-layout">
+      <article>
+        <div class="chapter-content">
+
+          <h2 id="intro">1. Introduction to Suspensions</h2>
+          <p>A <strong>suspension</strong> is a heterogeneous (biphasic) liquid dosage form in which finely divided insoluble solid particles are dispersed in a liquid (usually aqueous) medium. The dispersed phase consists of solid particles, and the continuous phase is the liquid vehicle.</p>
+          <div class="info-box">
+            <h4><i class="fa-solid fa-lightbulb"></i> Key Definition</h4>
+            <p style="margin:0;"><strong>Suspension:</strong> A two-phase system in which solid particles (0.5–5 µm) are dispersed in a liquid medium. They are thermodynamically unstable and must be shaken before use.</p>
+          </div>
+
+          <h3 id="advantages">1.1 Advantages of Suspensions</h3>
+          <ul>
+            <li>Useful for drugs that are insoluble or poorly soluble in water</li>
+            <li>Better chemical stability than solutions (drug not dissolved)</li>
+            <li>Masking of bitter taste (drug not in solution)</li>
+            <li>Suitable for drugs that are unstable in solution form</li>
+            <li>Prolonged drug action possible (depot effect)</li>
+            <li>Flexible dosing — dose can be adjusted easily</li>
+          </ul>
+
+          <h3 id="disadvantages">1.2 Disadvantages of Suspensions</h3>
+          <ul>
+            <li>Physical instability — sedimentation over time</li>
+            <li>Caking — hard sediment difficult to redisperse</li>
+            <li>Dose uniformity difficult to maintain</li>
+            <li>Must be shaken before use (patient compliance issue)</li>
+            <li>Bulky — inconvenient to transport</li>
+          </ul>
+
+          <h2 id="types">2. Types of Suspensions</h2>
+          <div class="table-wrap">
+            <table>
+              <tr><th>Type</th><th>Description</th><th>Example</th></tr>
+              <tr><td>Oral suspensions</td><td>For internal use, sweetened</td><td>Paracetamol suspension</td></tr>
+              <tr><td>Topical suspensions</td><td>Applied to skin</td><td>Calamine lotion</td></tr>
+              <tr><td>Ophthalmic suspensions</td><td>For eye use — sterile</td><td>Prednisolone eye drops</td></tr>
+              <tr><td>Parenteral suspensions</td><td>Injected — sterile</td><td>Insulin zinc suspension</td></tr>
+              <tr><td>Dry suspensions</td><td>Powder reconstituted with water</td><td>Amoxicillin dry syrup</td></tr>
+            </table>
+          </div>
+
+          <h2 id="theory">3. Theory of Suspensions — Sedimentation</h2>
+          <p>Suspended particles settle under gravity — this is called <strong>sedimentation</strong>. The rate of settling is given by <strong>Stokes' Law</strong>:</p>
+          <div class="info-box accent">
+            <h4>📐 Stokes' Law</h4>
+            <p style="margin:0;"><strong>V = d²(ρs − ρl)g / 18η</strong><br>
+            Where: V = settling velocity, d = particle diameter, ρs = density of particle, ρl = density of liquid, g = gravity, η = viscosity of liquid</p>
+          </div>
+          <p><strong>To reduce sedimentation rate:</strong></p>
+          <ul>
+            <li>Reduce particle size (d²)</li>
+            <li>Reduce density difference (ρs − ρl)</li>
+            <li>Increase viscosity of the medium (η)</li>
+          </ul>
+
+          <h3 id="flocculation">3.1 Flocculated vs Deflocculated Suspensions</h3>
+          <div class="table-wrap">
+            <table>
+              <tr><th>Property</th><th>Flocculated</th><th>Deflocculated</th></tr>
+              <tr><td>Particles</td><td>Loose aggregates (flocs)</td><td>Separate, individual</td></tr>
+              <tr><td>Sedimentation rate</td><td>Fast (large flocs settle quickly)</td><td>Slow (small particles)</td></tr>
+              <tr><td>Sediment</td><td>Loose, easy to redisperse</td><td>Hard, difficult to redisperse (caking)</td></tr>
+              <tr><td>Appearance</td><td>Turbid, not elegant</td><td>Clear supernatant, elegant</td></tr>
+              <tr><td>Preferred for</td><td>Stability (no caking)</td><td>Appearance</td></tr>
+            </table>
+          </div>
+          <div class="info-box secondary">
+            <h4>⭐ Exam Tip</h4>
+            <p style="margin:0;"><strong>Flocculated suspensions are preferred pharmaceutically</strong> because even though they settle faster, the sediment is loose and easily redispersed with shaking. Deflocculated suspensions form a hard cake that cannot be redispersed.</p>
+          </div>
+
+          <h2 id="formulation">4. Formulation of Suspensions</h2>
+          <h3>4.1 Components</h3>
+          <ul>
+            <li><strong>Drug (dispersed phase)</strong> — insoluble solid, micronized for better dispersion</li>
+            <li><strong>Vehicle (continuous phase)</strong> — purified water, syrup, sorbitol solution</li>
+            <li><strong>Suspending agents</strong> — increase viscosity, prevent sedimentation</li>
+            <li><strong>Wetting agents</strong> — help hydrophobic drug particles wet by water</li>
+            <li><strong>Flocculating agents</strong> — controlled flocculation (electrolytes)</li>
+            <li><strong>Preservatives</strong> — antimicrobial protection</li>
+            <li><strong>Sweeteners & flavors</strong> — for palatability (oral)</li>
+            <li><strong>Buffers</strong> — pH control</li>
+          </ul>
+
+          <h3 id="suspending">4.2 Suspending Agents</h3>
+          <p>Suspending agents increase viscosity and reduce sedimentation. They are classified as:</p>
+          <div class="table-wrap">
+            <table>
+              <tr><th>Category</th><th>Examples</th><th>Concentration</th></tr>
+              <tr><td>Natural gums</td><td>Acacia, Tragacanth, Guar gum</td><td>0.5–2%</td></tr>
+              <tr><td>Semisynthetic celluloses</td><td>CMC (carboxymethylcellulose), HPMC, Methylcellulose</td><td>0.5–1.5%</td></tr>
+              <tr><td>Clays</td><td>Bentonite, Veegum (magnesium aluminium silicate)</td><td>0.5–5%</td></tr>
+              <tr><td>Synthetic polymers</td><td>Carbomer (Carbopol)</td><td>0.1–0.5%</td></tr>
+            </table>
+          </div>
+
+          <h3 id="wetting">4.3 Wetting Agents</h3>
+          <p>Hydrophobic drugs do not disperse in water — wetting agents are needed to reduce the contact angle.</p>
+          <ul>
+            <li><strong>Surfactants:</strong> Polysorbate 80 (Tween 80), Sodium lauryl sulfate</li>
+            <li><strong>Hydrophilic colloids:</strong> Acacia, Tragacanth</li>
+            <li><strong>Solvents:</strong> Glycerin, Propylene glycol (as wetting aids)</li>
+          </ul>
+
+          <h2 id="preparation">5. Preparation of Suspensions</h2>
+          <h3>5.1 Dispersion Method</h3>
+          <ol>
+            <li>Reduce particle size of drug by grinding (trituration)</li>
+            <li>Wet the drug powder with a small amount of wetting agent or vehicle</li>
+            <li>Add suspending agent solution gradually while stirring</li>
+            <li>Add remaining vehicle, sweeteners, preservatives, flavor</li>
+            <li>Make up to final volume and homogenize</li>
+          </ol>
+
+          <h3>5.2 Precipitation Method</h3>
+          <p>Drug is dissolved in a solvent and then precipitated by adding a non-solvent. Gives very fine particles. Example: Sulfur suspension.</p>
+
+          <h2 id="stability">6. Stability of Suspensions</h2>
+          <p>The most common stability problem in suspensions is <strong>caking</strong> — formation of a hard sediment that cannot be redispersed.</p>
+          <div class="info-box">
+            <h4>Key Stability Problems</h4>
+            <ul style="margin:0;">
+              <li><strong>Caking:</strong> Hard sediment — prevented by controlled flocculation</li>
+              <li><strong>Crystal growth (Ostwald ripening):</strong> Small particles dissolve, large grow — prevented by using viscosity enhancers</li>
+              <li><strong>Polymorphic changes:</strong> Change in crystal form</li>
+              <li><strong>Microbial growth:</strong> Prevented by preservatives</li>
+            </ul>
+          </div>
+
+          <h2 id="evaluation">7. Evaluation of Suspensions</h2>
+          <div class="table-wrap">
+            <table>
+              <tr><th>Test</th><th>Purpose</th><th>Method</th></tr>
+              <tr><td>Sedimentation volume (F)</td><td>Assess settling</td><td>F = Vu/Vo (Vu = final settled vol, Vo = total vol). Ideal F = 1</td></tr>
+              <tr><td>Degree of flocculation (β)</td><td>Compare flocculated vs deflocculated</td><td>β = F/F∞</td></tr>
+              <tr><td>Redispersibility</td><td>Ease of shaking to redisperse</td><td>Number of shakes needed</td></tr>
+              <tr><td>Zeta potential</td><td>Measure of stability</td><td>Electrophoresis — ideal >±30 mV for stability</td></tr>
+              <tr><td>Particle size</td><td>Check uniformity</td><td>Microscopy, laser diffraction</td></tr>
+              <tr><td>pH</td><td>Drug stability</td><td>pH meter</td></tr>
+              <tr><td>Viscosity</td><td>Flow properties</td><td>Brookfield viscometer</td></tr>
+            </table>
+          </div>
+
+          <h2 id="summary">8. Quick Revision Summary</h2>
+          <div class="info-box secondary">
+            <h4>📝 Key Points to Remember</h4>
+            <ul style="margin:0;">
+              <li>Suspension = heterogeneous, biphasic, thermodynamically unstable</li>
+              <li>Particle size: 0.5–5 µm (coarse suspension); &lt;0.5 µm (colloidal)</li>
+              <li>Stokes' Law — settling depends on particle size², density difference, viscosity</li>
+              <li>Flocculated = preferred (loose cake, easy redispersion)</li>
+              <li>Best suspending agent: CMC, Bentonite, Tragacanth</li>
+              <li>Best wetting agent: Tween 80 (Polysorbate 80)</li>
+              <li>Zeta potential &gt;±30 mV = physically stable suspension</li>
+              <li>Sedimentation volume F = 1 is ideal (no settling)</li>
+            </ul>
+          </div>
+
+          <div class="content-nav">
+            <a href="ch3-solutions.html" class="btn btn-outline"><i class="fa-solid fa-arrow-left"></i> Ch 3: Solutions</a>
+            <a href="ch5-emulsions.html" class="btn btn-primary">Next: Emulsions <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <div class="rating-section">
+            <span class="rating-label">Rate these notes<small>Help us improve</small></span>
+            <div class="star-row">
+              <button class="star-btn" data-v="1">★</button>
+              <button class="star-btn" data-v="2">★</button>
+              <button class="star-btn" data-v="3">★</button>
+              <button class="star-btn" data-v="4">★</button>
+              <button class="star-btn" data-v="5">★</button>
+            </div>
+            <p id="ratingText" style="font-size:.8rem;color:var(--text-muted);margin-top:.5rem;"></p>
+          </div>
+        </div>
+      </article>
+      <aside class="sidebar-sticky">
+        <div class="toc">
+          <h4><i class="fa-solid fa-list"></i> Chapter Contents</h4>
+          <ul>
+            <li><a href="#intro">1. Introduction</a></li>
+            <li><a href="#types">2. Types</a></li>
+            <li><a href="#theory">3. Theory & Stokes' Law</a></li>
+            <li><a href="#flocculation">3.1 Flocculated vs Deflocculated</a></li>
+            <li><a href="#formulation">4. Formulation</a></li>
+            <li><a href="#suspending">4.2 Suspending Agents</a></li>
+            <li><a href="#preparation">5. Preparation</a></li>
+            <li><a href="#stability">6. Stability</a></li>
+            <li><a href="#evaluation">7. Evaluation</a></li>
+            <li><a href="#summary">8. Summary</a></li>
+          </ul>
+        </div>
+        <div class="toc" style="margin-top:1rem;">
+          <h4><i class="fa-solid fa-forward"></i> Other Chapters</h4>
+          <ul>
+            <li><a href="ch3-solutions.html">← Ch 3: Solutions</a></li>
+            <li><a href="ch5-emulsions.html">Ch 5: Emulsions →</a></li>
+            <li><a href="subject.html">All Chapters →</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+</main>
+
+<button id="backToTop"><i class="fa-solid fa-arrow-up"></i></button>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <div class="footer-logo"><i class="fa-solid fa-flask-vial"></i></div>
+          <span class="footer-brand-name">D-Pharma Learn</span>
+        </div>
+        <p class="footer-desc">Free educational platform for Diploma in Pharmacy students across India.</p>
+        <div class="footer-social">
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#"><i class="fa-brands fa-telegram"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Pharmaceutics I</h4><ul>
+        <li><a href="ch1-history.html">Ch 1: History</a></li>
+        <li><a href="ch2-dosage-forms.html">Ch 2: Dosage Forms</a></li>
+        <li><a href="ch3-solutions.html">Ch 3: Solutions</a></li>
+        <li><a href="ch4-suspensions.html">Ch 4: Suspensions</a></li>
+        <li><a href="ch5-emulsions.html">Ch 5: Emulsions</a></li>
+        <li><a href="subject.html">All Chapters →</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Quick Links</h4><ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="year1.html">1st Year</a></li>
+        <li><a href="syllabus.html">Syllabus</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 D-Pharma Learn. Free education for pharmacy students.</p>
+      <p>Made with ❤️ for D-Pharma Students</p>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+<script>
+  if (sessionStorage.getItem('autoPrint') === '1') {
+    sessionStorage.removeItem('autoPrint');
+    window.addEventListener('load', function() { setTimeout(function(){ window.print(); }, 800); });
+  }
+</script>
+</body>
+</html>
