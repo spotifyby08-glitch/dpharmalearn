@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Introduction, Errors & Impurities in Pharmaceutical Substances | Pharmaceutical Chemistry I</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    html,body{overflow-x:hidden!important;width:100%;}
+    .two-col-layout{display:block!important;}
+    @media(min-width:900px){.two-col-layout{display:grid!important;grid-template-columns:1fr 260px;gap:2rem;}}
+    .chapter-content{padding:1rem;border-radius:12px;}
+    @media(min-width:640px){.chapter-content{padding:1.75rem;}}
+    .info-box{background:#f0faf4;border:1.5px solid #a7d7b8;border-radius:10px;padding:1rem 1.1rem;margin:1rem 0;}
+    .info-box.accent{background:#fdf6e3;border-color:#e8c97a;}
+    .info-box.secondary{background:#f0f9ff;border-color:#bae0fd;}
+    .info-box h4{color:#1a5c38;margin:0 0 .4rem;font-size:.95rem;}
+    .info-box h4 i{margin-right:.4rem;color:#c9a84c;}
+    .table-wrap{overflow-x:auto;margin:.75rem 0;border-radius:8px;border:1px solid #e2e8f0;}
+    .table-wrap table{margin:0;min-width:380px;width:100%;border-collapse:collapse;}
+    .table-wrap table thead tr{background:#1a5c38;color:#fff;}
+    .table-wrap table tbody tr:nth-child(even){background:#f0faf4;}
+    .table-wrap table th,.table-wrap table td{padding:.6rem .75rem;border:1px solid #c6e8d3;font-size:.875rem;vertical-align:top;line-height:1.5;}
+    .exam-box{background:#fff8f0;border:2px solid #f59e0b;border-radius:10px;padding:1rem 1.1rem;margin:1.25rem 0;}
+    .exam-box h4{color:#b45309;margin:0 0 .5rem;}
+    .exam-box ul{margin:.25rem 0 0;padding-left:1.2rem;}
+    .exam-box li{font-size:.875rem;margin-bottom:.35rem;line-height:1.5;}
+    .content-nav{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:2rem;}
+    .site-header,.nav-container{background:#0f3d25!important;}
+    .nav-brand-name{color:#fff!important;}.nav-brand-tag{color:#c9a84c!important;}
+    .nav-links a{color:#d1fae5!important;}.nav-links a.active{color:#c9a84c!important;}
+    .btn-primary{background:#1a5c38!important;border-color:#1a5c38!important;}
+    .page-hero{background:linear-gradient(135deg,#0f3d25 0%,#1a5c38 60%,#2d7a50 100%)!important;}
+    .page-hero h1,.page-hero p,.breadcrumb strong{color:#fff!important;}
+    .breadcrumb a{color:#c9a84c!important;}.breadcrumb span{color:#a7d7b8!important;}
+    .chapter-content h2{color:#1a5c38;border-left:4px solid #c9a84c;padding-left:.65rem;margin-top:2rem;}
+    .chapter-content h3{color:#0f3d25;margin-top:1.25rem;}
+    .chapter-content h4{color:#1a5c38;}
+    .chapter-content p{line-height:1.75;margin-bottom:.75rem;}
+    .chapter-content ul li,.chapter-content ol li{line-height:1.65;margin-bottom:.35rem;}
+    .rating-section{margin-top:2rem;padding:1rem;background:#f0faf4;border-radius:10px;border:1px solid #a7d7b8;}
+    .star-btn{background:none;border:none;font-size:1.6rem;cursor:pointer;color:#ccc;}
+    .star-btn.active{color:#c9a84c;}
+    #backToTop{background:#1a5c38!important;position:fixed;bottom:1.5rem;right:1.5rem;width:42px;height:42px;border-radius:50%;border:none;cursor:pointer;display:none;align-items:center;justify-content:center;color:#fff;}
+    .footer-grid{display:grid!important;grid-template-columns:1fr!important;gap:1.25rem!important;margin-bottom:1.75rem;}
+    @media(min-width:1024px){.footer-grid{grid-template-columns:2fr 1fr 1fr 1fr!important;}}
+    #searchOverlay{position:fixed!important;inset:0!important;z-index:99999!important;background:rgba(10,30,18,.88)!important;display:flex!important;align-items:flex-start!important;justify-content:center!important;padding-top:4rem!important;opacity:0;pointer-events:none;transition:opacity .2s;}
+    #searchOverlay.open{opacity:1!important;pointer-events:all!important;}
+    #searchOverlay .search-box{background:#fff!important;border-radius:18px!important;width:calc(100% - 2rem)!important;max-width:540px!important;overflow:hidden!important;}
+    #searchOverlay .search-box-top{display:flex!important;align-items:center!important;gap:.7rem!important;padding:.9rem 1.1rem!important;border-bottom:1.5px solid #e2e8f0!important;}
+    #searchOverlay .search-box-top input{flex:1!important;border:none!important;outline:none!important;font-size:1rem!important;background:transparent!important;}
+    #searchOverlay .search-x{width:28px!important;height:28px!important;border-radius:6px!important;border:1px solid #e2e8f0!important;background:#f8fafc!important;cursor:pointer!important;font-size:.75rem!important;display:flex!important;align-items:center!important;justify-content:center!important;}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav-container">
+    <a class="nav-brand" href="index.html">
+      <div class="nav-logo"><i class="fa-solid fa-flask"></i></div>
+      <div class="nav-brand-text"><span class="nav-brand-name">D-Pharma Learn</span><span class="nav-brand-tag">Free Education</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li><li><a href="year1.html" class="active">1st Year</a></li>
+      <li><a href="year2.html">2nd Year</a></li><li><a href="syllabus.html">Syllabus</a></li>
+    </ul>
+    <div class="nav-cta">
+      <button class="search-toggle-btn" id="searchToggle"><i class="fa-solid fa-magnifying-glass"></i></button>
+      <button class="theme-toggle-btn" id="themeToggle"><i class="fa-solid fa-moon"></i></button>
+      <a href="pharm-chem-subject.html" class="btn btn-primary btn-sm"><i class="fa-solid fa-arrow-left"></i> All Chapters</a>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+</header>
+<div id="searchOverlay">
+  <div class="search-box">
+    <div class="search-box-top"><i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" placeholder="Search topics…" autocomplete="off"/>
+      <button class="search-x" id="searchClose"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div style="padding:2rem;text-align:center;color:#94a3b8;"><p>Type to search…</p></div>
+  </div>
+</div>
+<nav class="mobile-nav" id="mobileNav"><a href="index.html">Home</a><a href="year1.html">1st Year</a><a href="year2.html">2nd Year</a></nav>
+<main>
+<section class="page-hero" style="padding:3rem 0 2.5rem;">
+  <div class="container">
+    <nav class="breadcrumb"><a href="index.html">Home</a><span>/</span><a href="year1.html">1st Year</a><span>/</span><a href="pharm-chem-subject.html">Pharmaceutical Chemistry I</a><span>/</span><strong>Chapter 1</strong></nav>
+    <h1 style="margin-top:.75rem;">Introduction, Errors & Impurities in Pharmaceutical Substances</h1>
+    <p>Chapter 1 — Pharmaceutical Chemistry I | D-Pharma 1st Year</p>
+  </div>
+</section>
+<section class="section" style="padding-top:2.5rem;">
+  <div class="container"><div class="two-col-layout"><article><div class="chapter-content">
+
+<h2>1. Introduction to Pharmaceutical Chemistry</h2>
+<p><strong>Pharmaceutical Chemistry</strong> is the branch of chemistry concerned with the design, synthesis, analysis, and quality control of drugs and pharmaceutical substances. It combines principles of organic chemistry, inorganic chemistry, biochemistry, and pharmacology to ensure that drugs are safe, effective, and of acceptable quality before they reach the patient.</p>
+<p><strong>Scope:</strong> Pharmaceutical chemistry covers: (a) study of physical and chemical properties of drug substances; (b) identification, characterisation, and structure determination of drugs; (c) synthesis of new drug molecules and chemical modification of existing drugs to improve activity; (d) analysis and quality control using pharmacopoeial (IP, BP, USP) and non-pharmacopoeial methods; (e) study of drug stability, degradation products, and impurity profiling; (f) development of analytical methods (HPLC, UV, titration) for drug testing.</p>
+<p><strong>Importance in pharmacy practice:</strong> Every drug released for patient use must meet defined standards of <strong>identity</strong> (is it the correct drug?), <strong>purity</strong> (is it free from harmful impurities?), and <strong>potency</strong> (does it contain the right amount of active substance?). Pharmaceutical chemistry provides the scientific basis for establishing and testing these standards.</p>
+<p><strong>Structure-Activity Relationship (SAR)</strong> is a key concept — it describes how changes in a drug's chemical structure affect its biological activity, toxicity, and pharmacokinetics. Understanding SAR allows medicinal chemists to design more potent, selective, and safer drugs. For example, modifying the acetyl group in aspirin (acetylsalicylic acid) to different acyl groups changes its anti-inflammatory potency. SAR is the foundation of modern rational drug design.</p>
+<div class="info-box secondary">
+  <h4><i class="fa-solid fa-circle-info"></i> Pharmacopoeias — Quality Standards</h4>
+  <p>A <strong>pharmacopoeia</strong> is an official book of standards for medicines. The <strong>Indian Pharmacopoeia (IP)</strong> is published by the Indian Pharmacopoeia Commission (IPC) and sets legally enforceable standards for drugs manufactured and sold in India. Other major pharmacopoeias include the British Pharmacopoeia (BP), United States Pharmacopeia (USP), and European Pharmacopoeia (EP). They specify tests for identification, purity, and assay of each official drug.</p>
+</div>
+
+<h2>2. Errors in Pharmaceutical Analysis</h2>
+<p>In any quantitative analysis, the measured result rarely equals the true value exactly. The difference between the measured value and the true value is called an <strong>error</strong>. Understanding and minimising errors is essential for reliable analytical results.</p>
+<p><strong>Error = Measured Value − True Value</strong></p>
+<p>Errors are classified into three main types:</p>
+
+<h3>2.1 Determinate Errors (Systematic Errors)</h3>
+<p>These are errors that have a definite, assignable cause and always affect results in the <strong>same direction</strong> (always too high or always too low). They are <strong>reproducible</strong> and can be detected and eliminated once identified.</p>
+<ul>
+  <li><strong>Operational errors:</strong> Poor technique — incorrect titration endpoint, incomplete washing of precipitate, loss of material during transfer</li>
+  <li><strong>Instrumental errors:</strong> Uncalibrated balances, faulty burettes, inaccurate pipettes, temperature errors in volumetric glassware</li>
+  <li><strong>Reagent errors:</strong> Impure reagents, degraded standards, incorrect concentration of solutions</li>
+  <li><strong>Method errors:</strong> Inherent flaws in the analytical method — e.g., a reaction that is never 100% complete, or a side reaction that consumes part of the analyte</li>
+</ul>
+
+<h3>2.2 Indeterminate Errors (Random Errors)</h3>
+<p>These are errors due to <strong>uncontrollable, unpredictable fluctuations</strong> in measurements — slight variations in temperature, humidity, observer's reading of a scale (parallax error), electrical fluctuations in instruments. They affect results <strong>randomly</strong> — sometimes high, sometimes low — and cannot be completely eliminated. They can be <strong>minimised by taking multiple readings and calculating the mean</strong>. Statistical methods (standard deviation, confidence intervals) are used to quantify random errors.</p>
+
+<h3>2.3 Gross Errors (Blunders)</h3>
+<p>These are large errors caused by <strong>analyst mistakes</strong> — misreading a burette, recording a wrong number, using the wrong reagent, or arithmetic mistakes in calculations. They are not systematic and not random — they are simply human errors. Results affected by gross errors are discarded and the experiment repeated.</p>
+
+<div class="table-wrap">
+  <table>
+    <thead><tr><th>Feature</th><th>Determinate</th><th>Indeterminate</th><th>Gross</th></tr></thead>
+    <tbody>
+      <tr><td>Cause</td><td>Definite, known</td><td>Random fluctuations</td><td>Human mistake</td></tr>
+      <tr><td>Direction</td><td>Always same direction</td><td>Random (+ or −)</td><td>Any</td></tr>
+      <tr><td>Reproducibility</td><td>Reproducible</td><td>Not reproducible</td><td>Not reproducible</td></tr>
+      <tr><td>Can be eliminated?</td><td>Yes, once identified</td><td>Minimised by repetition</td><td>Yes, by care</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h3>2.4 Accuracy and Precision</h3>
+<ul>
+  <li><strong>Accuracy:</strong> How close the measured value is to the <strong>true value</strong>. A measure of correctness. Expressed as percentage error or percentage recovery.</li>
+  <li><strong>Precision:</strong> How close repeated measurements are to <strong>each other</strong> (reproducibility). Does NOT indicate whether results are near the true value.</li>
+</ul>
+<div class="info-box accent">
+  <h4><i class="fa-solid fa-bullseye"></i> Accuracy vs Precision — Exam Classic</h4>
+  <p><strong>High accuracy + High precision:</strong> All shots hit the bullseye (ideal)</p>
+  <p><strong>Low accuracy + High precision:</strong> All shots clustered together but away from bullseye (systematic error present)</p>
+  <p style="margin:0;"><strong>Low accuracy + Low precision:</strong> Shots scattered all over (random error dominant)</p>
+</div>
+
+<h3>2.5 Methods to Minimise Errors</h3>
+<ul>
+  <li>Calibrate all instruments (balances, burettes, pipettes) regularly</li>
+  <li>Use freshly prepared, standardised reagents and solutions</li>
+  <li>Perform <strong>blank corrections</strong> — run a blank (no analyte) to subtract background</li>
+  <li>Run <strong>parallel determinations</strong> (duplicate/triplicate) and average results</li>
+  <li>Use <strong>internal standards</strong> in chromatographic methods</li>
+  <li>Ensure proper training of analysts and strict adherence to SOP (Standard Operating Procedures)</li>
+</ul>
+
+<h2>3. Impurities in Pharmaceutical Substances</h2>
+<p>An <strong>impurity</strong> is any component of a drug substance or drug product that is not the intended chemical entity. Even trace amounts of impurities can be clinically significant — affecting safety, efficacy, and stability of the drug.</p>
+
+<h3>3.1 Sources of Impurities</h3>
+<ul>
+  <li><strong>Starting materials:</strong> Impurities already present in raw materials used for synthesis</li>
+  <li><strong>Synthesis by-products:</strong> Intermediates, side-reaction products, unreacted starting materials left over from manufacturing</li>
+  <li><strong>Degradation:</strong> Breakdown of the drug molecule due to heat, light, moisture, oxidation, or hydrolysis during storage</li>
+  <li><strong>Equipment:</strong> Leaching of metals or contaminants from reactors, pipes, and containers during manufacturing</li>
+  <li><strong>Residual solvents:</strong> Organic solvents used in synthesis or purification that are not completely removed</li>
+  <li><strong>Packaging:</strong> Migration of plasticisers, inks, or adhesives from primary packaging into the product</li>
+</ul>
+
+<h3>3.2 Classification of Impurities (ICH Q3A/Q3B)</h3>
+<p>The International Council for Harmonisation (ICH) classifies impurities into three categories:</p>
+
+<h4>A. Organic Impurities</h4>
+<ul>
+  <li>Arise from the synthesis process or degradation of the drug substance</li>
+  <li>Include: <strong>starting materials, intermediates, by-products, degradation products</strong></li>
+  <li>Examples: Salicylic acid in aspirin (hydrolysis product); 4-aminophenol in paracetamol (degradation product — toxic)</li>
+  <li>Detected and quantified by <strong>HPLC, TLC, GC</strong></li>
+</ul>
+
+<h4>B. Inorganic Impurities</h4>
+<ul>
+  <li>Derived from manufacturing processes, equipment, or raw materials</li>
+  <li>Include: <strong>Heavy metals</strong> (Pb, As, Hg, Cd), <strong>chlorides, sulphates, iron</strong>, inorganic salts, catalysts (palladium, nickel), filter aids</li>
+  <li>Detected by <strong>pharmacopoeial limit tests</strong> (covered in Chapter 2)</li>
+  <li>Heavy metals are of particular concern due to toxicity even at very low concentrations (ppm level)</li>
+</ul>
+
+<h4>C. Residual Solvents</h4>
+<p>Organic solvents used during synthesis that remain in the final product. ICH Q3C classifies them into three classes:</p>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th>Class</th><th>Risk</th><th>Permitted Daily Exposure</th><th>Examples</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Class 1</strong></td><td>Known human carcinogens — avoid</td><td>Should not be used; if unavoidable, &lt;2 ppm</td><td>Benzene, carbon tetrachloride, 1,2-dichloroethane</td></tr>
+      <tr><td><strong>Class 2</strong></td><td>Non-genotoxic animal carcinogens or neurotoxins</td><td>Limited (PDE established)</td><td>Acetonitrile, methanol, toluene, chloroform</td></tr>
+      <tr><td><strong>Class 3</strong></td><td>Low toxic potential</td><td>&lt;50 mg/day (generally safe)</td><td>Acetone, ethanol, ethyl acetate, isopropanol</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h3>3.3 Effects of Impurities and Their Control</h3>
+<p>Even trace amounts of impurities can have serious consequences on drug quality and patient safety:</p>
+<ul>
+  <li><strong>Toxicity:</strong> Heavy metals (As, Pb, Hg, Cd) are highly toxic even at ppm levels — they accumulate in body tissues causing kidney damage, neurotoxicity, and carcinogenicity. Arsenic above 2 ppm in any drug is unacceptable.</li>
+  <li><strong>Reduced efficacy:</strong> If an inert impurity makes up a significant percentage of the drug's weight, the actual active content per dose is less than labelled — resulting in underdosing.</li>
+  <li><strong>Allergic reactions:</strong> Degradation products of penicillin (penicilloic acid, penilloic acid) are the major cause of penicillin hypersensitivity and anaphylaxis — the impurities, not the drug itself, are the allergens.</li>
+  <li><strong>Altered stability:</strong> Metal ion impurities (Fe²⁺, Cu²⁺) catalyse oxidative degradation of drugs, causing premature breakdown, colour change, and loss of potency during storage.</li>
+  <li><strong>Pharmacological side effects:</strong> 4-aminophenol in paracetamol causes methaemoglobinaemia; free salicylic acid in aspirin causes additional gastric irritation.</li>
+</ul>
+<p><strong>Control of impurities:</strong> Pharmacopoeias (IP, BP, USP, EP) set legally enforceable limits for each specified impurity in every drug monograph. Manufacturers must test every batch and demonstrate compliance before product release. ICH guidelines Q3A (impurities in new drug substances) and Q3B (impurities in drug products) govern global standards for impurity reporting, identification, and qualification thresholds.</p>
+
+<h2>4. Introduction to Limit Tests</h2>
+<p>A <strong>Limit Test</strong> is a semi-quantitative test that determines whether the amount of a specific impurity in a drug substance <strong>exceeds a defined maximum permissible level</strong>. It gives a pass/fail result — not the exact quantity.</p>
+<p><strong>Principle:</strong> The test solution (drug sample) is compared against a standard solution containing a known, permitted amount of the impurity. Both are treated with the same reagent under identical conditions. If the test solution produces equal or less colour/turbidity than the standard → test PASSES.</p>
+<p><strong>Limit tests described in IP:</strong> Chlorides, Sulphates, Iron, Heavy Metals, and Arsenic (Gutzeit method). These are covered in detail in Chapter 2.</p>
+<div class="info-box">
+  <h4><i class="fa-solid fa-lightbulb"></i> General Precautions for Limit Tests</h4>
+  <ul style="margin:0;">
+    <li>Use matched <strong>Nessler cylinders</strong> (identical flat-bottomed glass tubes, 50 mL) for fair visual comparison</li>
+    <li>Use freshly boiled and cooled <strong>ion-free distilled water</strong></li>
+    <li>All glassware must be free from the ion being tested</li>
+    <li>Standard solutions must be <strong>freshly prepared</strong></li>
+    <li>Compare both tubes against a <strong>white background</strong> in uniform light</li>
+    <li>Turbidity tests: view from <strong>top downward</strong> | Colour tests: view from the <strong>side</strong></li>
+  </ul>
+</div>
+
+<div class="exam-box">
+  <h4>📝 Previous Year Exam Questions — Chapter 1</h4>
+  <ul>
+    <li>Define pharmaceutical chemistry. Write its scope and importance. <em>(2 marks)</em></li>
+    <li>Classify errors in pharmaceutical analysis with examples. <em>(4 marks)</em></li>
+    <li>Differentiate between accuracy and precision with examples. <em>(3 marks)</em></li>
+    <li>What are determinate errors? Give four types with examples. <em>(4 marks)</em></li>
+    <li>Define impurity. Classify impurities in pharmaceutical substances according to ICH guidelines. <em>(5 marks)</em></li>
+    <li>Write the sources of impurities in drug substances. <em>(3 marks)</em></li>
+    <li>Classify residual solvents as per ICH Q3C with examples of each class. <em>(4 marks)</em></li>
+    <li>What is a limit test? State its principle. Write any four general precautions. <em>(5 marks)</em></li>
+    <li>What are Nessler cylinders? Why are matched cylinders used in limit tests? <em>(2 marks)</em></li>
+    <li>Write the effects of impurities on drug quality. <em>(3 marks)</em></li>
+    <li>Differentiate between organic and inorganic impurities with examples. <em>(3 marks)</em></li>
+    <li>What is SAR (Structure-Activity Relationship)? Give one example. <em>(2 marks)</em></li>
+  </ul>
+</div>
+
+    <div class="content-nav">
+      <a href="pharm-chem-subject.html" class="btn btn-outline"><i class="fa-solid fa-arrow-left"></i> All Chapters</a>
+      <a href="pc2-limit-tests.html" class="btn btn-primary">Next: Limit Tests <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+    <div class="rating-section">
+      <div class="rating-label">Rate this chapter<small style="display:block;color:#64748b;font-size:.8rem;">Help other students</small></div>
+      <div style="margin-top:.5rem;">
+        <button class="star-btn" data-v="1">★</button><button class="star-btn" data-v="2">★</button>
+        <button class="star-btn" data-v="3">★</button><button class="star-btn" data-v="4">★</button>
+        <button class="star-btn" data-v="5">★</button>
+        <span id="ratingText" style="margin-left:.5rem;font-size:.9rem;color:#64748b;"></span>
+      </div>
+    </div>
+  </div></article></div></div>
+</section>
+</main>
+<button id="backToTop"><i class="fa-solid fa-arrow-up"></i></button>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><b>D-Pharma Learn</b><p style="font-size:.85rem;color:#64748b;margin-top:.3rem;">Free education for D-Pharma students.</p></div>
+      <div class="footer-col"><h4>Pharm. Chemistry I</h4><ul>
+        <li><a href="pc1-intro-impurities.html">Ch 1: Intro &amp; Impurities</a></li>
+        <li><a href="pc2-limit-tests.html">Ch 2: Limit Tests</a></li>
+        <li><a href="pc3-haematinics.html">Ch 3: Haematinics</a></li>
+        <li><a href="pharm-chem-subject.html">All Chapters →</a></li></ul></div>
+      <div class="footer-col"><h4>Other Subjects</h4><ul>
+        <li><a href="subject.html">Pharmaceutics I</a></li></ul></div>
+      <div class="footer-col"><h4>Quick Links</h4><ul>
+        <li><a href="index.html">Home</a></li><li><a href="syllabus.html">Syllabus</a></li></ul></div>
+    </div>
+    <div style="border-top:1px solid #e2e8f0;padding-top:1rem;font-size:.72rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem;">
+      <p>&copy; 2024 D-Pharma Learn.</p><p>Made with ❤️ for D-Pharma Students</p>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+<script>
+  document.querySelectorAll('.star-btn').forEach(b=>b.addEventListener('click',()=>{
+    const v=+b.dataset.v;
+    document.querySelectorAll('.star-btn').forEach(s=>s.classList.toggle('active',+s.dataset.v<=v));
+    document.getElementById('ratingText').textContent=['','Poor','Fair','Good','Very Good','Excellent'][v]+' ('+v+'/5)';
+  }));
+  const btt=document.getElementById('backToTop');
+  window.addEventListener('scroll',()=>btt.style.display=window.scrollY>300?'flex':'none');
+  btt.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+  const ham=document.getElementById('hamburger'),mn=document.getElementById('mobileNav');
+  if(ham&&mn)ham.addEventListener('click',()=>mn.classList.toggle('open'));
+  const st=document.getElementById('searchToggle'),so=document.getElementById('searchOverlay'),sc=document.getElementById('searchClose');
+  if(st&&so){st.addEventListener('click',()=>so.classList.add('open'));sc.addEventListener('click',()=>so.classList.remove('open'));so.addEventListener('click',e=>{if(e.target===so)so.classList.remove('open');});}
+</script>
+</body></html>
